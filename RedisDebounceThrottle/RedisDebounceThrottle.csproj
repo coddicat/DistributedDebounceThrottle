@@ -2,11 +2,30 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>DistributedDebounceThrottle</PackageId>
+    <Version>1.0.0</Version>
+    <Description>.NET library designed to facilitate debounce and throttle mechanisms in distributed system environments, 
+    leveraging Redis for state management and distributed locking. 
+    This ensures that function executions are properly debounced or throttled across multiple instances, 
+    preventing excessive or unintended operations.
+    </Description>
+    <Copyright>Rodion Shlomo Solomonyk</Copyright>
+    <RepositoryUrl>https://github.com/coddicat/DistributedDebounceThrottle</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/coddicat/DistributedDebounceThrottle</PackageProjectUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageLicenseFile>license.txt</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>    
     <PackageReference Include="RedLock.net" Version="2.3.2" />
     <PackageReference Include="StackExchange.Redis" Version="2.7.33" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\license.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
